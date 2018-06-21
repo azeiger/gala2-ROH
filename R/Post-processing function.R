@@ -1,12 +1,5 @@
 # Post-processing function
 
-# PR
-
-# Make a combined GWAS results file
-setwd("/media/BurchardRaid01/LabShare/Home/azeiger/ROH_Pipeline/Asthma_Risk/PR_Results")
-results = paste("GALA2_mergedLAT-LATP_noParents_030816_PR.")
-results_out = paste(".ROH.R.out.results")
-
 results_processing = function(results, results_out) {
 	chr = 1
 	file = paste(results, chr, results_out, sep = "")
@@ -26,12 +19,6 @@ results_processing = function(results, results_out) {
 	}
 
 results_processing(results, results_out)
-
-# Diagnostic plots
-results = paste("ordered_probes.txt")
-manhattan_file_name = paste("PR.roh.asthma.risk.manhattan.png")
-manhattan_title = paste("PR Asthma Risk")
-qq_file_name = paste("Q-Q of PR Asthma Risk ROH GWAS.png")
 
 
 diagnostic_plots = function(results, manhattan_file_name, manhattan_title, qq_file_name) {
